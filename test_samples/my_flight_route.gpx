@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx version="1.1" creator="Navplan Custom Route" 
+     xmlns="http://www.topografix.com/GPX/1/1"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
+  
+  <metadata>
+    <name>Multi-Day Flight Route</name>
+    <desc>LFSB - LSZR - EDMS - LKTC - LOWS - LOWI - EDNY - LFSB</desc>
+  </metadata>
+  
+  <!-- Route -->
+  <rte>
+    <name>European Tour Route</name>
+    <desc>Multi-day flight across European airports</desc>
+    
+    <!-- Leg 1: Basel to St.Gallen (120nm) -->
+    <rtept lat="47.592222" lon="7.529167">
+      <ele>266</ele>
+      <name>LFSB</name>
+      <desc>Basel-Mulhouse-Freiburg Airport (Start)</desc>
+      <cmt>Day 1 - Departure</cmt>
+    </rtept>
+    
+    <rtept lat="47.485278" lon="9.560556">
+      <ele>437</ele>
+      <name>LSZR</name>
+      <desc>St.Gallen-Altenrhein Airport</desc>
+      <cmt>Day 1 - 120nm from LFSB | Date: 07.11.25</cmt>
+    </rtept>
+    
+    <!-- Leg 2: St.Gallen to Straubing (140nm) -->
+    <rtept lat="48.901667" lon="12.516667">
+      <ele>348</ele>
+      <name>EDMS</name>
+      <desc>Straubing-Wallmühle Airport</desc>
+      <cmt>Day 1 - 140nm from LSZR | Date: 07.11.25</cmt>
+    </rtept>
+    
+    <!-- Leg 3: Straubing to Tocna (140nm) -->
+    <rtept lat="49.151667" lon="13.845278">
+      <ele>520</ele>
+      <name>LKTC</name>
+      <desc>Tocna Airport (Czech Republic)</desc>
+      <cmt>Day 2 - 140nm from EDMS | Date: 08.11.25</cmt>
+    </rtept>
+    
+    <!-- Leg 4: Tocna to Salzburg (170nm) -->
+    <rtept lat="47.793333" lon="13.004167">
+      <ele>430</ele>
+      <name>LOWS</name>
+      <desc>Salzburg Airport (W.A. Mozart)</desc>
+      <cmt>Day 2 - 170nm from LKTC | Date: 08.11.25</cmt>
+    </rtept>
+    
+    <!-- Leg 5: Salzburg to Innsbruck (90nm) -->
+    <rtept lat="47.260208" lon="11.343958">
+      <ele>581</ele>
+      <name>LOWI</name>
+      <desc>Innsbruck Airport (Kranebitten)</desc>
+      <cmt>Day 3 - 90nm from LOWS | Date: 09.06.25</cmt>
+    </rtept>
+    
+    <!-- Leg 6: Innsbruck to Friedrichshafen (100nm) -->
+    <rtept lat="47.671111" lon="9.511389">
+      <ele>416</ele>
+      <name>EDNY</name>
+      <desc>Friedrichshafen Airport</desc>
+      <cmt>Day 3 - 100nm from LOWI | Date: 09.06.25</cmt>
+    </rtept>
+    
+    <!-- Leg 7: Friedrichshafen back to Basel (90nm) -->
+    <rtept lat="47.592222" lon="7.529167">
+      <ele>266</ele>
+      <name>LFSB</name>
+      <desc>Basel-Mulhouse-Freiburg Airport (Return)</desc>
+      <cmt>Return - 90nm from EDNY</cmt>
+    </rtept>
+    
+  </rte>
+  
+  <!-- Individual Waypoints for reference -->
+  <wpt lat="47.592222" lon="7.529167">
+    <ele>266</ele>
+    <name>LFSB</name>
+    <desc>Basel-Mulhouse-Freiburg Airport</desc>
+    <type>Airport</type>
+  </wpt>
+  
+  <wpt lat="47.485278" lon="9.560556">
+    <ele>437</ele>
+    <name>LSZR</name>
+    <desc>St.Gallen-Altenrhein Airport</desc>
+    <type>Airport</type>
+  </wpt>
+  
+  <wpt lat="48.901667" lon="12.516667">
+    <ele>348</ele>
+    <name>EDMS</name>
+    <desc>Straubing-Wallmühle Airport</desc>
+    <type>Airport</type>
+  </wpt>
+  
+  <wpt lat="49.151667" lon="13.845278">
+    <ele>520</ele>
+    <name>LKTC</name>
+    <desc>Tocna Airport</desc>
+    <type>Airport</type>
+  </wpt>
+  
+  <wpt lat="47.793333" lon="13.004167">
+    <ele>430</ele>
+    <name>LOWS</name>
+    <desc>Salzburg Airport</desc>
+    <type>Airport</type>
+  </wpt>
+  
+  <wpt lat="47.260208" lon="11.343958">
+    <ele>581</ele>
+    <name>LOWI</name>
+    <desc>Innsbruck Airport</desc>
+    <type>Airport</type>
+  </wpt>
+  
+  <wpt lat="47.671111" lon="9.511389">
+    <ele>416</ele>
+    <name>EDNY</name>
+    <desc>Friedrichshafen Airport</desc>
+    <type>Airport</type>
+  </wpt>
+  
+</gpx>
+

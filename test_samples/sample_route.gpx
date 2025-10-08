@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx version="1.1" creator="Navplan Test" 
+     xmlns="http://www.topografix.com/GPX/1/1"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
+  
+  <metadata>
+    <name>Sample VFR Route</name>
+    <desc>Test route for waypoint import</desc>
+  </metadata>
+  
+  <wpt lat="46.914100" lon="7.497100">
+    <ele>510</ele>
+    <name>LSZB</name>
+    <desc>Bern-Belp Airport</desc>
+  </wpt>
+  
+  <wpt lat="47.178889" lon="7.318056">
+    <ele>290</ele>
+    <name>LSGN</name>
+    <desc>Grenchen Airport</desc>
+  </wpt>
+  
+  <wpt lat="47.592222" lon="7.529167">
+    <ele>266</ele>
+    <name>LFSB</name>
+    <desc>EuroAirport Basel-Mulhouse-Freiburg</desc>
+  </wpt>
+  
+  <rte>
+    <name>VFR Route LSZB-LFSB</name>
+    <rtept lat="46.914100" lon="7.497100">
+      <ele>510</ele>
+      <name>LSZB</name>
+      <desc>Departure</desc>
+    </rtept>
+    <rtept lat="47.000000" lon="7.400000">
+      <name>WP1</name>
+      <desc>Via waypoint</desc>
+    </rtept>
+    <rtept lat="47.178889" lon="7.318056">
+      <ele>290</ele>
+      <name>LSGN</name>
+      <desc>Checkpoint</desc>
+    </rtept>
+    <rtept lat="47.592222" lon="7.529167">
+      <ele>266</ele>
+      <name>LFSB</name>
+      <desc>Destination</desc>
+    </rtept>
+  </rte>
+  
+</gpx>
+

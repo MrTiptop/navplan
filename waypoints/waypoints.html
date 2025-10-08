@@ -15,6 +15,19 @@
 					</span>					
 				</div>
 			</div>
+		</div>
+		<!-- Import Waypoints -->
+		<div class="form-group">
+			<label for="waypoint_import" class="control-label col-sm-3">Import Waypoints</label>
+			<div class="col-sm-6">
+				<div class="input-group">
+					<input type="file" id="waypoint_import" class="form-control" accept=".gpx,.kml,.fpl" ng-model="importFile" style="padding: 3px;" />
+					<span class="input-group-btn">
+						<button type="button" class="btn btn-primary" title="Import Waypoints from File (GPX, KML, FPL)" ng-click="importWaypoints();"><i class="glyphicon glyphicon-upload"></i> Import</button>
+					</span>
+				</div>
+				<small class="text-muted">Supported formats: GPX, KML, FPL (Garmin)</small>
+			</div>
 		</div>	
 		<div class="form-group">
 			<label for="navplan_name" class="control-label col-sm-3">Route Name</label>

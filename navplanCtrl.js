@@ -146,11 +146,12 @@ function navplanCtrl($scope, $http, $timeout, globalData, userService, mapServic
 	};
 
 
-	$scope.showRuSureMessage = function(title, text, confirmCallback)
+	$scope.showRuSureMessage = function(title, text, confirmCallback, cancelCallback)
     {
         $scope.globalData.ruSureTitle = title;
         $scope.globalData.ruSureMessage = text;
         $scope.globalData.ruSureCallback = confirmCallback;
+        $scope.globalData.ruSureCancelCallback = cancelCallback;
 
         $('#ruSureDialog').modal('show');
     };
@@ -316,6 +317,13 @@ function navplanCtrl($scope, $http, $timeout, globalData, userService, mapServic
     {
         if ($scope.globalData.ruSureCallback)
             $scope.globalData.ruSureCallback();
+    };
+
+
+    $scope.onRuSureCancelClicked = function()
+    {
+        if ($scope.globalData.ruSureCancelCallback)
+            $scope.globalData.ruSureCancelCallback();
     };
 
 	

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<flight-plan xmlns="http://www8.garmin.com/xmlschemas/FlightPlan/v1">
+  <file-description>Sample VFR Route</file-description>
+  <route>
+    <route-name>LSZB LFSB</route-name>
+    <route-description>Test route for waypoint import</route-description>
+    <flight-plan-index>1</flight-plan-index>
+    
+    <route-point>
+      <waypoint-country-code>CH</waypoint-country-code>
+      <waypoint-type>AIRPORT</waypoint-type>
+      <waypoint-identifier>LSZB</waypoint-identifier>
+      <type>airport</type>
+      <country-code>CH</country-code>
+      <identifier>LSZB</identifier>
+      <airport-id>LSZB</airport-id>
+      <lat>46.914100</lat>
+      <lon>7.497100</lon>
+    </route-point>
+    
+    <route-point>
+      <waypoint-country-code>__</waypoint-country-code>
+      <waypoint-type>USER WAYPOINT</waypoint-type>
+      <waypoint-identifier>WP1</waypoint-identifier>
+      <type>user-waypoint</type>
+      <identifier>WP1</identifier>
+      <comment>Via waypoint</comment>
+      <lat>47.000000</lat>
+      <lon>7.400000</lon>
+    </route-point>
+    
+    <route-point>
+      <waypoint-country-code>CH</waypoint-country-code>
+      <waypoint-type>AIRPORT</waypoint-type>
+      <waypoint-identifier>LSGN</waypoint-identifier>
+      <type>airport</type>
+      <country-code>CH</country-code>
+      <identifier>LSGN</identifier>
+      <airport-id>LSGN</airport-id>
+      <lat>47.178889</lat>
+      <lon>7.318056</lon>
+    </route-point>
+    
+    <route-point>
+      <waypoint-country-code>CH</waypoint-country-code>
+      <waypoint-type>AIRPORT</waypoint-type>
+      <waypoint-identifier>LFSB</waypoint-identifier>
+      <type>airport</type>
+      <country-code>CH</country-code>
+      <identifier>LFSB</identifier>
+      <airport-id>LFSB</airport-id>
+      <lat>47.592222</lat>
+      <lon>7.529167</lon>
+    </route-point>
+    
+  </route>
+</flight-plan>
+

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Sample VFR Route</name>
+    <description>Test route for waypoint import</description>
+    
+    <Placemark>
+      <name>LSZB</name>
+      <description>Bern-Belp Airport</description>
+      <Point>
+        <coordinates>7.497100,46.914100,510</coordinates>
+      </Point>
+    </Placemark>
+    
+    <Placemark>
+      <name>LSGN</name>
+      <description>Grenchen Airport</description>
+      <Point>
+        <coordinates>7.318056,47.178889,290</coordinates>
+      </Point>
+    </Placemark>
+    
+    <Placemark>
+      <name>LFSB</name>
+      <description>EuroAirport Basel-Mulhouse-Freiburg</description>
+      <Point>
+        <coordinates>7.529167,47.592222,266</coordinates>
+      </Point>
+    </Placemark>
+    
+    <Placemark>
+      <name>Route LSZB to LFSB</name>
+      <description>VFR flight route</description>
+      <LineString>
+        <coordinates>
+          7.497100,46.914100,510
+          7.400000,47.000000,400
+          7.318056,47.178889,290
+          7.529167,47.592222,266
+        </coordinates>
+      </LineString>
+    </Placemark>
+    
+  </Document>
+</kml>
+

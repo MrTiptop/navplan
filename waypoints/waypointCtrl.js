@@ -21,6 +21,86 @@ function waypointCtrl($scope, $http, geopointService, fuelService, userService, 
     };
 
 
+	$scope.importWaypoints = function()
+	{
+		var fileInput = document.getElementById('waypoint_import');
+		var file = fileInput.files[0];
+
+		if (!file) {
+			$scope.showErrorMessage('Please select a file to import');
+			return;
+		}
+
+		// Check file extension
+		var fileName = file.name;
+		var fileExtension = fileName.split('.').pop().toLowerCase();
+		
+		if (!['gpx', 'kml', 'fpl'].includes(fileExtension)) {
+			$scope.showErrorMessage('Unsupported file format. Please use GPX, KML, or FPL files.');
+			return;
+		}
+
+		// Create FormData object
+		var formData = new FormData();
+		formData.append('waypointFile', file);
+
+		// Upload file
+		$http.post('php/waypointImport.php', formData, {
+			transformRequest: angular.identity,
+			headers: {'Content-Type': undefined}
+		})
+		.then(
+			function(response) // success
+			{
+				if (response.data.success === 1 && response.data.waypoints) {
+					// Clear current waypoints or ask user
+					if ($scope.globalData.navplan.waypoints.length > 0) {
+						$scope.showRuSureMessage(
+							"Import Waypoints",
+							"Do you want to append waypoints to the current route or replace it?",
+							function() {
+								// Replace
+								$scope.globalData.navplan.waypoints = [];
+								$scope.addImportedWaypoints(response.data.waypoints);
+							},
+							function() {
+								// Append
+								$scope.addImportedWaypoints(response.data.waypoints);
+							}
+						);
+					} else {
+						// No waypoints, just add them
+						$scope.addImportedWaypoints(response.data.waypoints);
+					}
+					
+					// Clear file input
+					fileInput.value = '';
+				} else {
+					$scope.showErrorMessage('Failed to import waypoints: ' + (response.data.error || 'Unknown error'));
+				}
+			},
+			function(response) // error
+			{
+				logResponseError("ERROR importing waypoints", response);
+				$scope.showErrorMessage('Failed to import waypoints');
+			}
+		);
+	};
+
+
+	$scope.addImportedWaypoints = function(waypoints)
+	{
+		for (var i = 0; i < waypoints.length; i++) {
+			var wp = waypoints[i];
+			$scope.globalData.navplan.waypoints.push(wp);
+		}
+		
+		$scope.updateWaypoints();
+		$scope.discardCache();
+		$scope.showSuccessMessage('Successfully imported ' + waypoints.length + ' waypoints!');
+	};
+
+
     $scope.loadNavplan = function()
 	{
 		userService.readNavplan($scope.selectedNavplanId)
